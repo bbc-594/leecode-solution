@@ -1,7 +1,7 @@
 /*
  * @Author: bbc-594
  * @Date: 2021-03-03 16:59:02
- * @LastEditTime: 2021-03-03 17:39:09
+ * @LastEditTime: 2021-04-28 14:41:23
  * @FilePath: /leecode/公共前缀.js
  */
 var longestCommonPrefix = function(strs) {
@@ -20,20 +20,13 @@ var longestCommonPrefix = function(strs) {
     }
     return ans
 };
-// var longestCommonPrefix = function(strs) {
-//     var temp;
-//     var first = str[0]
-//     var index = 1;
-//     while(true){
-//         var char;
-//         char = first.substring(0,1);
-//         var next = str[index]
-//         if(char.startwith(next)){
-
-//         }
-
-
-//     }
-    
-//     };
-longestCommonPrefix(["flower","flow","flight"])
+var longestCommonPrefix = function(strs) {
+    strs.sort((prev, next) => prev.length - next.length)
+    let temp = strs[0];
+    let result = "";
+    console.log('temp :>> ', temp);
+    for (let i = 0; i < temp.length; i++) {
+        if (temp[i] === str)
+    }
+};
+console.log('object :>> ', longestCommonPrefix(["flower","flow","flight"]));
